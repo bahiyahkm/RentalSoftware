@@ -6,6 +6,7 @@
 <head runat="server">
     <title></title>
     <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/MyStyle.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -16,11 +17,10 @@
                 <div class="col-md-4">
                     <asp:Menu ID="Menu1" runat="server">
                         <Items>
-                            <asp:MenuItem Text="Menu" Value="Menu">
-                                <asp:MenuItem Text="Items" Value="Items"></asp:MenuItem>
-                                <asp:MenuItem Text="Rent" Value="Rent"></asp:MenuItem>
-                                <asp:MenuItem Text="Customers" Value="Customers"></asp:MenuItem>
-                            </asp:MenuItem>
+                            <asp:MenuItem Text="Menu" Value="Menu"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ItemDetails.aspx" Text="Items" Value="Items"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Rent.aspx" Text="Rent" Value="Rent"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Customer.aspx" Text="Customer" Value="Customer"></asp:MenuItem>
                         </Items>
                     </asp:Menu>
                 </div>
