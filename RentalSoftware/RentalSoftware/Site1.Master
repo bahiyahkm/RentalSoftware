@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="RentalSoftware.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <form id="form1" runat="server">
+                <div class="col-md-4">
+                    <asp:Menu ID="Menu1" runat="server">
+                        <Items>
+                            <asp:MenuItem Text="Menu" Value="Menu">
+                                <asp:MenuItem Text="Items" Value="Items"></asp:MenuItem>
+                                <asp:MenuItem Text="Rent" Value="Rent"></asp:MenuItem>
+                                <asp:MenuItem Text="Customers" Value="Customers"></asp:MenuItem>
+                            </asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                </div>
+                <div class="col-md-8">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
