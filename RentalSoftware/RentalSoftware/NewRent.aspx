@@ -15,7 +15,7 @@
             <asp:Label ID="Label6" runat="server" Text="ItemName"></asp:Label>
         </div>
         <div class="col-md-12">
-            <asp:DropDownList ID="DropDownList1" runat="server" Height="21px">
+            <asp:DropDownList ID="DropDownList1" runat="server" Height="21px" AutoPostBack="True">
             </asp:DropDownList>
         </div>
     </div>

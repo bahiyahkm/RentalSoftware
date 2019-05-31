@@ -18,6 +18,8 @@ namespace RentalSoftware
         CustomerDetails objcust = new CustomerDetails();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Page.IsPostBack)
+            { 
             CommonFunction objcmn = new CommonFunction();
             TxtRentTransno.Text = objcmn.GenerateRentTransNo();
             CustomerDetails objcust = new CustomerDetails();
@@ -27,7 +29,7 @@ namespace RentalSoftware
             row["CustomerName"] = "--Select Customer--";
             dt.Rows.InsertAt(row, 0);
             DropDownList2.DataSource = dt;
-            DropDownList2.DataTextField= "CustomerName";
+            DropDownList2.DataTextField = "CustomerName";
             DropDownList2.DataValueField = "CustomerId";
             DropDownList2.DataBind();
             Item objitem = new Item();
@@ -37,9 +39,10 @@ namespace RentalSoftware
             row1["ItemName"] = "--Select Item--";
             dt_itm.Rows.InsertAt(row1, 0);
             DropDownList1.DataSource = dt_itm;
-            DropDownList1.DataTextField= "ItemName";
+            DropDownList1.DataTextField = "ItemName";
             DropDownList1.DataValueField = "ItemId";
             DropDownList1.DataBind();
+             }
         }
         public void clear()
         {
