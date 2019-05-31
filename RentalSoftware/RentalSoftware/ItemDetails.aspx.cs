@@ -14,7 +14,7 @@ namespace RentalSoftware
         Item objitem = new Item();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Page.IsPostBack)
+            if (!Page.IsPostBack)
                 Bind();
                 
         }

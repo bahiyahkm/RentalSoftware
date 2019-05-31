@@ -8,6 +8,7 @@
         </div>
         <div class="col-md-12">
             <asp:TextBox ID="TxtCustomername" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TxtCustomername" ErrorMessage="Must be required"></asp:RequiredFieldValidator>
         </div>
     </div>
     <div class="row m-2">
@@ -24,6 +25,7 @@
         </div>
         <div class="col-md-12">
             <asp:TextBox ID="TxtPhoneNo" runat="server"></asp:TextBox>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TxtPhoneNo" ErrorMessage="Invalid Phone Number" ValidationExpression="\d{10}"></asp:RegularExpressionValidator>
         </div>
     </div>
     <div class="row m-2">
@@ -40,13 +42,14 @@
             </div>
         <div class="col-md-12">
     <asp:TextBox ID="TxtEmail" runat="server"></asp:TextBox>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TxtEmail" ErrorMessage="Invalid Email address" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
             </div>
         </div>
     
     <div class="row m-2">
-    <asp:Button ID="BtnAdd" runat="server" Text="Add" />
+    <asp:Button ID="BtnAdd" runat="server" Text="Add" OnClick="BtnAdd_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:Button ID="BtnSave" runat="server" Text="Save" />
+    <asp:Button ID="BtnCancel" runat="server" Text="Cancel" />
 &nbsp;
     <asp:Label ID="LblMessage" runat="server" Text="Label"></asp:Label>
     

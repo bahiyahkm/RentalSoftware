@@ -83,8 +83,10 @@
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="Login.aspx" />
+    <Content Include="Login1.aspx" />
     <Content Include="NewRent.aspx" />
     <Content Include="Rent.aspx" />
+    <Content Include="RentalSystem.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -102,6 +104,8 @@
     <Compile Include="AddItem.aspx.designer.cs">
       <DependentUpon>AddItem.aspx</DependentUpon>
     </Compile>
+    <Compile Include="BAL\Accounts.cs" />
+    <Compile Include="BAL\CommonFunction.cs" />
     <Compile Include="BAL\CustomerDetails.cs" />
     <Compile Include="BAL\Item.cs" />
     <Compile Include="BAL\RentDetails.cs" />
@@ -127,6 +131,13 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Login1.aspx.cs">
+      <DependentUpon>Login1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login1.aspx.designer.cs">
+      <DependentUpon>Login1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="NewRent.aspx.cs">
       <DependentUpon>NewRent.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -141,6 +152,13 @@
     </Compile>
     <Compile Include="Rent.aspx.designer.cs">
       <DependentUpon>Rent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RentalSystem.aspx.cs">
+      <DependentUpon>RentalSystem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RentalSystem.aspx.designer.cs">
+      <DependentUpon>RentalSystem.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>

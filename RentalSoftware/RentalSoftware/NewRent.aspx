@@ -33,7 +33,7 @@
             <asp:Label ID="Label8" runat="server" Text="StartDate"></asp:Label>
         </div>
         <div class="col-md-12">
-            <asp:TextBox ID="TxtStart" runat="server"></asp:TextBox>
+            <asp:TextBox ID="TxtStart" runat="server" TextMode="Date"></asp:TextBox>
         </div>
     </div>
     <div class="row m-2">
@@ -49,7 +49,8 @@
             &nbsp;&nbsp;
     <asp:Button ID="BtnCancel" runat="server" Text="Cancel" />
             &nbsp;
-    <asp:Label ID="Label10" runat="server" Text="Label"></asp:Label>
+    <asp:Label ID="Lblitem" runat="server"></asp:Label>
+    <asp:Label ID="Lblcust" runat="server"></asp:Label>
         </div>
     <br />
        

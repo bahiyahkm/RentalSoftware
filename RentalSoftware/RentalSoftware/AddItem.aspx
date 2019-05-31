@@ -27,7 +27,7 @@
            </div>
        </div>
     <div class="row m-2">
-        <asp:Button ID="BtnAdd" runat="server" Text="Add" CssClass="btn active" />
+        <asp:Button ID="BtnAdd" runat="server" Text="Add" CssClass="btn active" OnClick="BtnAdd_Click" />
         &nbsp;&nbsp;&nbsp;
             <asp:Button ID="BtnCancel" runat="server" Text="Cancel" CssClass="btn active" />
         &nbsp;&nbsp;&nbsp;<asp:Label ID="LblMessage" runat="server" Text="Label"></asp:Label>

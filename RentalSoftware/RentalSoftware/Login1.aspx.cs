@@ -9,8 +9,9 @@ using RentalSoftware.BAL;
 
 namespace RentalSoftware
 {
-    public partial class Login : System.Web.UI.Page
+    public partial class Login1 : System.Web.UI.Page
     {
+        
         Accounts objaccount = new Accounts();
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -27,7 +28,7 @@ namespace RentalSoftware
                 TxtUsername.Text = " ";
                 TxtPassword.Text = "";
             }
-            
+
             else
             {
                 Response.Write("Login Failed");
