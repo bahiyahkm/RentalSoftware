@@ -22,12 +22,12 @@ namespace RentalSoftware {
         protected global::System.Web.UI.WebControls.Button BtnNew;
         
         /// <summary>
-        /// GridViewRent control.
+        /// GridViewRental control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewRent;
+        protected global::System.Web.UI.WebControls.GridView GridViewRental;
     }
 }

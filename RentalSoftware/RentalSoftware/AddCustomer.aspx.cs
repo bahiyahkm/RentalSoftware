@@ -37,6 +37,11 @@ namespace RentalSoftware
             TxtPhoneNo.Text = "";
             TxtCity.Text = "";
             TxtEmail.Text = "";
-        }//test
+        }
+
+        protected void BtnCancel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -9,7 +9,7 @@
     </div>
     <div class="row m-2">
         <div class="col-md-12">
-&nbsp;<asp:GridView ID="GridViewcustomer" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+&nbsp;<asp:GridView ID="GridViewcustomer" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridViewcustomer_SelectedIndexChanged">
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <EditRowStyle BackColor="#999999" />
                 <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />

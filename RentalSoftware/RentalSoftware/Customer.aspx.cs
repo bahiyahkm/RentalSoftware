@@ -29,5 +29,10 @@ namespace RentalSoftware
         {
             Response.Redirect("AddCustomer.aspx");
         }
+
+        protected void GridViewcustomer_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

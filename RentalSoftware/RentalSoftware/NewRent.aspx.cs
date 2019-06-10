@@ -19,8 +19,9 @@ namespace RentalSoftware
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
-            { 
-            CommonFunction objcmn = new CommonFunction();
+            {
+               
+                CommonFunction objcmn = new CommonFunction();
             TxtRentTransno.Text = objcmn.GenerateRentTransNo();
             CustomerDetails objcust = new CustomerDetails();
             DataTable dt = objcust.GetAllCustomers();
@@ -29,8 +30,8 @@ namespace RentalSoftware
             row["CustomerName"] = "--Select Customer--";
             dt.Rows.InsertAt(row, 0);
             DropDownList2.DataSource = dt;
-            DropDownList2.DataTextField = "CustomerName";
-            DropDownList2.DataValueField = "CustomerId";
+                DropDownList2.DataTextField = "CustomerName";
+            DropDownList2.DataValueField="CustomerId";
             DropDownList2.DataBind();
             Item objitem = new Item();
             DataTable dt_itm = objitem.GetAllItem();
@@ -42,8 +43,14 @@ namespace RentalSoftware
             DropDownList1.DataTextField = "ItemName";
             DropDownList1.DataValueField = "ItemId";
             DropDownList1.DataBind();
-             }
+
+                
+            }
         }
+        
+
+       
+
         public void clear()
         {
             CommonFunction objcmn = new CommonFunction();
@@ -56,6 +63,7 @@ namespace RentalSoftware
         {
             try
             {
+               
                 int Itemid = Convert.ToInt32(DropDownList1.DataValueField.ToString());
                 DataTable dt = objitem.GetItemById(Itemid);
                 if (dt.Rows.Count > 0)
@@ -63,21 +71,33 @@ namespace RentalSoftware
                     Lblitem.Text = dt.Rows[0]["RentRate"].ToString();
                 }
                 int CustId = Convert.ToInt32(DropDownList2.DataValueField.ToString());
-                DataTable dt = objcust.GetCustomerById(CustId);
-                if(dt.Rows.Count>0)
+                
+                int i = objrent.InsertRentItem(TxtRentTransno.Text,Itemid,CustId,Convert.ToDateTime(TxtStart.Text), Convert.ToDateTime(TxtEnd.Text), Convert.ToInt32(Lblitem.Text));
+                if(i>0)
                 {
-                    Lblcust.Text = dt.Rows[0]["CustomerId"].ToString();
+                    Response.Write("Data Added Succesfully");
+                    clear();
                 }
+                else
+                {
+                    Response.Write("Failed to add Data");
+                }
+
             }
             catch(Exception ex)
             {
-
+                Console.WriteLine($"There is an error: '{ex}'");
             }
         }
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
+        }
 
+        protected void DropDownList2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -49,7 +49,7 @@
     <div class="row m-2">
     <asp:Button ID="BtnAdd" runat="server" Text="Add" OnClick="BtnAdd_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:Button ID="BtnCancel" runat="server" Text="Cancel" />
+    <asp:Button ID="BtnCancel" runat="server" Text="Cancel" OnClick="BtnCancel_Click" />
 &nbsp;
     <asp:Label ID="LblMessage" runat="server" Text="Label"></asp:Label>
     
