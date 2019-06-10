@@ -37,6 +37,6 @@ namespace RentalSoftware
             TxtPhoneNo.Text = "";
             TxtCity.Text = "";
             TxtEmail.Text = "";
-        }
+        }//test
     }
 }
