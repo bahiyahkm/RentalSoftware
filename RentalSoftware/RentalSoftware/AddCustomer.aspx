@@ -51,7 +51,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;
     <asp:Button ID="BtnCancel" runat="server" Text="Cancel" OnClick="BtnCancel_Click" />
 &nbsp;
-    <asp:Label ID="LblMessage" runat="server" Text="Label"></asp:Label>
+    <asp:Label ID="LblMessage" runat="server" Text="Label" Visible="False"></asp:Label>
     
     </div>
 </asp:Content>

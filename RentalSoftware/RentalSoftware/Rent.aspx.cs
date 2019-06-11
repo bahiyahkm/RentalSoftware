@@ -14,6 +14,7 @@ namespace RentalSoftware
         RentDetails objrent = new RentDetails();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(Page.IsPostBack)
             Bind();
         }
         public void Bind()

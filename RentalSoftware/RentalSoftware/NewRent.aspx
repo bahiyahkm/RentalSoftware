@@ -45,9 +45,9 @@
         </div>
     </div>
     <div class="row m-2">
-          <asp:Button ID="BtnSave" runat="server" Text="Save" OnClick="BtnSave_Click" style="height: 26px" />
+          <asp:Button ID="BtnSave" runat="server" Text="Save" OnClick="BtnSave_Click" />
             &nbsp;&nbsp;
-    <asp:Button ID="BtnCancel" runat="server" Text="Cancel" />
+    <asp:Button ID="BtnCancel" runat="server" Text="Cancel" OnClick="BtnCancel_Click" />
             &nbsp;
     <asp:Label ID="Lblitem" runat="server" Visible="False"></asp:Label>
         </div>

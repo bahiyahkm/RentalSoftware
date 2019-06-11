@@ -245,8 +245,7 @@ textarea {
   line-height: inherit;
     margin-left: 0;
     margin-top: 0;
-    margin-bottom: 0;
-}
+    }
 
 button,
 input {
@@ -267,7 +266,8 @@ button,
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button;
-    }
+    width: 49px;
+}
 
 button:not(:disabled),
 [type="button"]:not(:disabled),

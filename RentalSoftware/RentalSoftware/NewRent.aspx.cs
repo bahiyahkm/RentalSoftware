@@ -21,7 +21,7 @@ namespace RentalSoftware
             if (!Page.IsPostBack)
             {
                
-                CommonFunction objcmn = new CommonFunction();
+            CommonFunction objcmn = new CommonFunction();
             TxtRentTransno.Text = objcmn.GenerateRentTransNo();
             CustomerDetails objcust = new CustomerDetails();
             DataTable dt = objcust.GetAllCustomers();
@@ -90,14 +90,9 @@ namespace RentalSoftware
             }
         }
 
-        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        protected void BtnCancel_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        protected void DropDownList2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
+           
         }
     }
 }
