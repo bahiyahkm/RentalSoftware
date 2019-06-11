@@ -15,7 +15,7 @@
             <asp:Label ID="Label6" runat="server" Text="ItemName"></asp:Label>
         </div>
         <div class="col-md-12">
-            <asp:DropDownList ID="DropDownList1" runat="server" Height="21px" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
+            <asp:DropDownList ID="DropDownList1" runat="server" Height="21px" AutoPostBack="True">
             </asp:DropDownList>
         </div>
     </div>
@@ -24,7 +24,7 @@
             <asp:Label ID="Label7" runat="server" Text="CustomerName"></asp:Label>
         </div>
         <div class="col-md-12">
-            <asp:DropDownList ID="DropDownList2" runat="server" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged">
+            <asp:DropDownList ID="DropDownList2" runat="server">
             </asp:DropDownList>
         </div>
     </div>
@@ -47,7 +47,7 @@
     <div class="row m-2">
           <asp:Button ID="BtnSave" runat="server" Text="Save" OnClick="BtnSave_Click" />
             &nbsp;&nbsp;
-    <asp:Button ID="BtnCancel" runat="server" Text="Cancel" OnClick="BtnCancel_Click" />
+    <asp:Button ID="BtnCancel" runat="server" Text="Cancel" OnClick="BtnCancel_Click" Width="78px" />
             &nbsp;
     <asp:Label ID="Lblitem" runat="server" Visible="False"></asp:Label>
         </div>

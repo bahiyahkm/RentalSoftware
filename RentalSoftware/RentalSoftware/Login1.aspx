@@ -10,28 +10,32 @@
 <body>
     <form id="form1" runat="server">
         <div class="container">
-            <div class="row m-2">
-        <div class="col-md-3">
-            <asp:Label ID="LblUsername" runat="server" Text="UserName"></asp:Label>
+            <div class="form-group">
+                
+                <asp:Label ID="LblUsername" runat="server" Text="UserName"></asp:Label>
+                <asp:TextBox ID="TxtUsername" runat="server" CssClass="form-control"></asp:TextBox>
+            </div>
+        
+
+
+
+        <div class="form-group">
+
+            <asp:Label ID="LabelPassword" runat="server" Text="Password"></asp:Label>
+            <asp:TextBox ID="TxtPassword" runat="server" CssClass="form-control"></asp:TextBox>
         </div>
-        <div class="col-md-12">
-            <asp:TextBox ID="TxtUsername" runat="server"></asp:TextBox>
+
+
+            <div class="row-m-2">
+                <div class="col-md-12">
+                    <asp:Button ID="BtnLogin" runat="server" Text="Login" OnClick="BtnLogin_Click" CssClass="btn-info" />
+
+
+                    <asp:Button ID="BtnCancel" runat="server" Text="Cancel"  CssClass="btn-info"/>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="row m-2">
-        <div class="col-md-3">
-            <asp:Label ID="LblPassword" runat="server" Text="Password"></asp:Label>
-        </div>
-        <div  class="col-md-12">
-            <asp:TextBox ID="TxtPassword" runat="server" TextMode="Password"></asp:TextBox>
-        </div>
-    </div>
-     <div class="row m-2">
-         <asp:Button ID="BtnLogin" runat="server" Text="Login" OnClick="BtnLogin_Click" />
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-         <asp:Button ID="BtnCancel" runat="server" Text="Cancel" />
-         </div>
-        </div>
+        
     </form>
 </body>
 </html>

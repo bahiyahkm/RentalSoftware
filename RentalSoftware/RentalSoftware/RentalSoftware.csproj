@@ -82,7 +82,6 @@
     <Content Include="js\bootstrap.bundle.min.js" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
-    <Content Include="Login.aspx" />
     <Content Include="Login1.aspx" />
     <Content Include="NewRent.aspx" />
     <Content Include="Rent.aspx" />
@@ -123,13 +122,6 @@
     </Compile>
     <Compile Include="ItemDetails.aspx.designer.cs">
       <DependentUpon>ItemDetails.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login1.aspx.cs">
       <DependentUpon>Login1.aspx</DependentUpon>

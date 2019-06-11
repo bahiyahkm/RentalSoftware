@@ -18,16 +18,23 @@ namespace RentalSoftware
 
         protected void BtnAdd_Click(object sender, EventArgs e)
         {
+            try
+            {
 
-            int i = objcust.InsertCustomer(TxtCustomername.Text, TxtAddress.Text, TxtPhoneNo.Text, TxtCity.Text, TxtEmail.Text);
-            if (i > 0)
-            {
-                Response.Write("Customer Added Successfully");
-                clear();
+                int i = objcust.InsertCustomer(TxtCustomername.Text, TxtAddress.Text, TxtPhoneNo.Text, TxtCity.Text, TxtEmail.Text);
+                if (i > 0)
+                {
+                    Response.Write("Customer Added Successfully");
+                    clear();
+                }
+                else
+                {
+                    Response.Write("Fail to Add Customer");
+                }
             }
-            else
+            catch(Exception ex)
             {
-                Response.Write("Fail to Add Customer");
+               
             }
         }
         public void clear()
@@ -42,8 +49,8 @@ namespace RentalSoftware
         protected void BtnCancel_Click(object sender, EventArgs e)
         {
 
+            Response.Redirect("RentalSystem.aspx");
 
-            
 
         }
             

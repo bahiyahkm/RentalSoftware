@@ -10,16 +10,16 @@ namespace RentalSoftware.BAL
     public class RentDetails
     {
         DbConnection db = new DbConnection();
-        public int InsertRentItem(string rentno, int custid, int itemid,DateTime sdate,DateTime edate,int price)
+        public int InsertRentItem(string rentno, int itemid, int custid, DateTime sdate,DateTime edate,int price)
         {
-            string sql = "insert into rented_tbl(TransactionNo,CustomerId,ItemId,StartDate,EndDate,Price) values ('" + rentno + "'," + custid + "," + itemid + "," + sdate + "," + edate + ",'"+price+"')";
+            string sql = "insert into rental_tbl(TransactionNo,ItemId,CustomerId,StartDate,EndDate,Price) values ('" + rentno + "'," + itemid + "," + custid + ",'" + sdate + "','" + edate + "',"+price+")";
             int i = db.InsertData(sql);
             return i;
         }
         public DataTable GetAllRentDetails()
         {
 
-            string sql = "select * from rented_tbl";
+            string sql = "select  rental_tbl.TransactionNo,item_tbl.ItemName,customer_tbl.CustomerName,rental_tbl.StartDate,rental_tbl.EndDate,rental_tbl.Price from rental_tbl inner join item_tbl on item_tbl.ItemId=rental_tbl.ItemId inner join  customer_tbl on customer_tbl.CustomerId=rental_tbl.CustomerId ";
             return db.GetData(sql);
 
         }

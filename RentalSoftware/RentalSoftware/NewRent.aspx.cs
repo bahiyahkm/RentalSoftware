@@ -63,17 +63,17 @@ namespace RentalSoftware
         {
             try
             {
-               
-                int Itemid = Convert.ToInt32(DropDownList1.DataValueField.ToString());
+
+                int Itemid = Convert.ToInt32(DropDownList1.SelectedValue.ToString());
                 DataTable dt = objitem.GetItemById(Itemid);
                 if (dt.Rows.Count > 0)
                 {
                     Lblitem.Text = dt.Rows[0]["RentRate"].ToString();
                 }
-                int CustId = Convert.ToInt32(DropDownList2.DataValueField.ToString());
-                
-                int i = objrent.InsertRentItem(TxtRentTransno.Text,Itemid,CustId,Convert.ToDateTime(TxtStart.Text), Convert.ToDateTime(TxtEnd.Text), Convert.ToInt32(Lblitem.Text));
-                if(i>0)
+                int CustId = Convert.ToInt32(DropDownList2.SelectedValue.ToString());
+
+                int i = objrent.InsertRentItem(TxtRentTransno.Text, Itemid, CustId, Convert.ToDateTime(TxtStart.Text), Convert.ToDateTime(TxtEnd.Text), Convert.ToInt32(Lblitem.Text));
+                if (i > 0)
                 {
                     Response.Write("Data Added Succesfully");
                     clear();
@@ -82,17 +82,18 @@ namespace RentalSoftware
                 {
                     Response.Write("Failed to add Data");
                 }
-
             }
             catch(Exception ex)
             {
-                Console.WriteLine($"There is an error: '{ex}'");
+                
             }
+
+                       
         }
 
         protected void BtnCancel_Click(object sender, EventArgs e)
         {
-           
+            Response.Redirect("RentalSystem.aspx");
         }
     }
 }

@@ -18,15 +18,22 @@ namespace RentalSoftware
 
         protected void BtnAdd_Click(object sender, EventArgs e)
         {
-            int i = objitem.InsertItem(TxtItemname.Text, Convert.ToInt32(TxtRentrate.Text), Convert.ToInt32(TxtQuantity.Text));
-            if(i>0)
+            try
             {
-                Response.Write("Item Added Succesfully");
-                clear();
+                int i = objitem.InsertItem(TxtItemname.Text, Convert.ToInt32(TxtRentrate.Text), Convert.ToInt32(TxtQuantity.Text));
+                if (i > 0)
+                {
+                    Response.Write("Item Added Succesfully");
+                    clear();
+                }
+                else
+                {
+                    Response.Write("Item Adding Failed");
+                }
             }
-            else
+            catch(Exception ex)
             {
-                Response.Write("Item Adding Failed");
+
             }
         }
         public void clear()
@@ -34,6 +41,11 @@ namespace RentalSoftware
             TxtItemname.Text = "";
             TxtRentrate.Text = "";
             TxtQuantity.Text = "";
+        }
+
+        protected void BtnCancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("RentalSystem.aspx");
         }
     }
 }
