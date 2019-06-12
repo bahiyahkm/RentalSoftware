@@ -33,5 +33,15 @@ namespace RentalSoftware.BAL
             string sql = "select * from customer_tbl where CudtomerId=" + custid + "";
             return db.GetData(sql);
         }
+       public DataTable GetCustomerDataToGrid()
+        {
+            string sql = "select * from customer_tbl";
+            return db.GetData(sql);
+        }
+        public DataTable GetNameToGrid(int custid)
+        {
+            string sql = "select * from customer_tbl where CustomerName=" + custid + "";
+            return db.GetData(sql);
+        }
     }
 }

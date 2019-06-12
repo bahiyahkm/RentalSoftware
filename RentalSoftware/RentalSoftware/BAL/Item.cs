@@ -27,5 +27,10 @@ namespace RentalSoftware.BAL
             string sql = "select * from item_tbl where ItemId=" + itemid+ "";
             return db.GetData(sql);
         }
+        public DataTable GetItemToGrid(string item)
+        {
+            string sql = "select * from item_tbl where ItemName='" + item + "'";
+            return db.GetData(sql);
+        }
     }
 }

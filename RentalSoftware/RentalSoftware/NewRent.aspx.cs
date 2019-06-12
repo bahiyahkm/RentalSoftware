@@ -64,7 +64,7 @@ namespace RentalSoftware
             try
             {
 
-                int Itemid = Convert.ToInt32(DropDownList1.SelectedValue.ToString());
+                int Itemid =Convert.ToInt32(DropDownList1.SelectedValue.ToString());
                 DataTable dt = objitem.GetItemById(Itemid);
                 if (dt.Rows.Count > 0)
                 {
@@ -72,7 +72,7 @@ namespace RentalSoftware
                 }
                 int CustId = Convert.ToInt32(DropDownList2.SelectedValue.ToString());
 
-                int i = objrent.InsertRentItem(TxtRentTransno.Text, Itemid, CustId, Convert.ToDateTime(TxtStart.Text), Convert.ToDateTime(TxtEnd.Text), Convert.ToInt32(Lblitem.Text));
+                int i = objrent.InsertRentItem(TxtRentTransno.Text,Itemid, CustId, Convert.ToDateTime(TxtStart.Text), Convert.ToDateTime(TxtEnd.Text), Convert.ToInt32(Lblitem.Text));
                 if (i > 0)
                 {
                     Response.Write("Data Added Succesfully");
@@ -85,7 +85,7 @@ namespace RentalSoftware
             }
             catch(Exception ex)
             {
-                
+                Response.Write("There is an error" + ex);
             }
 
                        

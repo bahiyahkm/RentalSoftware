@@ -2,55 +2,56 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="row m-2">
-        <div class="col-md-3">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="form-group">
             <asp:Label ID="Label1" runat="server" Text="RentTransactionNo"></asp:Label>
-        </div>
-        <div class="col-md-12">
-            <asp:TextBox ID="TxtRentTransno" runat="server"></asp:TextBox>
+            <asp:TextBox ID="TxtRentTransno" runat="server" CssClass="form-control"></asp:TextBox>
         </div>
     </div>
-    <div class="row m-2">
-        <div class="col-md-3">
+        <div class="col-sm-12">
+            <div class="form-group">
             <asp:Label ID="Label6" runat="server" Text="ItemName"></asp:Label>
-        </div>
-        <div class="col-md-12">
-            <asp:DropDownList ID="DropDownList1" runat="server" Height="21px" AutoPostBack="True">
+            <asp:DropDownList ID="DropDownList1" runat="server" Height="21px" AutoPostBack="True" CssClass="dropdown">
             </asp:DropDownList>
         </div>
     </div>
-    <div class="row m-2">
-        <div class="col-md-3">
+        <div class="col-sm-12">
+           <div class="form-group">
             <asp:Label ID="Label7" runat="server" Text="CustomerName"></asp:Label>
-        </div>
-        <div class="col-md-12">
-            <asp:DropDownList ID="DropDownList2" runat="server">
+            <asp:DropDownList ID="DropDownList2" runat="server" CssClass="form-control">
             </asp:DropDownList>
         </div>
     </div>
-    <div class="row m-2">
-        <div class="col-md-3">
+        <div class="col-sm-12">
+            <div class="form-group">
             <asp:Label ID="Label8" runat="server" Text="StartDate"></asp:Label>
-        </div>
-        <div class="col-md-12">
-            <asp:TextBox ID="TxtStart" runat="server" TextMode="Date"></asp:TextBox>
+            <asp:TextBox ID="TxtStart" runat="server" TextMode="Date" CssClass="form-control"></asp:TextBox>
         </div>
     </div>
-    <div class="row m-2">
-        <div class="col-md-3">
-            <asp:Label ID="Label9" runat="server" Text="EndDate"></asp:Label>
-        </div>
-        <div class="col-md-12">
-             <asp:TextBox ID="TxtEnd" runat="server" TextMode="Date"></asp:TextBox>
-        </div>
-    </div>
-    <div class="row m-2">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <asp:Label ID="Label9" runat="server" Text="EndDate"></asp:Label>
+                        <asp:TextBox ID="TxtEnd" runat="server" TextMode="Date" CssClass="form-control"></asp:TextBox>
+                    </div>
+    </div>    
+                </div>
+            </div>
+        
+    <div class="row m-12">
+        <div class="col-sm-12">
+            
           <asp:Button ID="BtnSave" runat="server" Text="Save" OnClick="BtnSave_Click" />
             &nbsp;&nbsp;
-    <asp:Button ID="BtnCancel" runat="server" Text="Cancel" OnClick="BtnCancel_Click" Width="78px" />
+    <asp:Button ID="BtnCancel" runat="server" Text="Cancel" OnClick="BtnCancel_Click" Width="78px"  />
             &nbsp;
     <asp:Label ID="Lblitem" runat="server" Visible="False"></asp:Label>
         </div>
-    <br />
-       
+           
+        </div>
+        </div>
+    
+     
 </asp:Content>

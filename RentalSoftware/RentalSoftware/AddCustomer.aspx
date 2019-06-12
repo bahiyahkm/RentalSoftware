@@ -46,12 +46,19 @@
                 </div>
             </div>
         </div>
-        <div class="row m-2">
+        <div class="row">
             <div class="col-md-12">
-                <asp:Button ID="BtnAdd" runat="server" Text="Add" OnClick="BtnAdd_Click" CssClass="btn-info" />
-                <asp:Button ID="BtnCancel" runat="server" Text="Cancel" OnClick="BtnCancel_Click" CssClass="btn-info" />
-                <asp:Label ID="LblMessage" runat="server" Text="Label" Visible="False"></asp:Label>
+                <div class="row-mb-2">
+                    
+                       <asp:Button ID="BtnAdd" runat="server" Text="Add" OnClick="BtnAdd_Click" CssClass="" />
+                    <div class="col">
+                        <asp:Button ID="BtnCancel" runat="server" Text="Cancel" OnClick="BtnCancel_Click" />
+                        </div>
+                    
+               </div>
+                   <asp:Label ID="LblMessage" runat="server" Text="Label" Visible="False"></asp:Label>
             </div>
+               
         </div>
     </div>
 </asp:Content>

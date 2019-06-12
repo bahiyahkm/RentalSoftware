@@ -8,26 +8,31 @@
                 <div class="card-body">
                     <div class="form-group">
             <asp:Label ID="Label1" runat="server" Text="ItemName"></asp:Label>
-             <asp:TextBox ID="TxtItemname" runat="server" CssClass="form-control"></asp:TextBox>
+             <asp:TextBox ID="TxtItemname" runat="server" CssClass="form-control" Width="186px"></asp:TextBox>
         </div>
-       <div class="col-sm-3">
+       <div class="col-sm-12">
             <div class="form-group">
             <asp:Label ID="Label2" runat="server" Text="RentRate"></asp:Label>
-            <asp:TextBox ID="TxtRentrate" runat="server" CssClass="form-control"></asp:TextBox>
+            <asp:TextBox ID="TxtRentrate" runat="server" CssClass="form-control" Width="123px" TextMode="Number"></asp:TextBox>
         </div>
     </div>
-       <div class="col-sm-3">
+       <div class="col-sm-12">
     <asp:Label ID="Label3" runat="server" Text="Quantity"></asp:Label>
-    <asp:TextBox ID="TxtQuantity" runat="server" CssClass="form-control"></asp:TextBox>
+    <asp:TextBox ID="TxtQuantity" runat="server" CssClass="form-control" Width="120px"></asp:TextBox>
            </div>
                     </div>
                 </div>
             </div>
+
+        <div class="row m-2">
+            <div class="col-md-12">
+
+                <asp:Button ID="BtnAdd" runat="server" Text="Add" OnClick="BtnAdd_Click" ValidationGroup="b" />
+                &nbsp;&nbsp;&nbsp;
+            <asp:Button ID="BtnCancel" runat="server" Text="Cancel" OnClick="BtnCancel_Click" />
+                &nbsp;&nbsp;&nbsp;<asp:Label ID="LblMessage" runat="server" Visible="False"></asp:Label>
+            </div>
+
         </div>
-    <div class="row m-2">
-        <asp:Button ID="BtnAdd" runat="server" Text="Add" CssClass="btn-primary" OnClick="BtnAdd_Click" ValidationGroup="b" />
-        &nbsp;&nbsp;&nbsp;
-            <asp:Button ID="BtnCancel" runat="server" Text="Cancel" CssClass="btn-warning" OnClick="BtnCancel_Click" />
-        &nbsp;&nbsp;&nbsp;<asp:Label ID="LblMessage" runat="server" Text="Label"></asp:Label>
-    </div>
+        </div>
 </asp:Content>

@@ -33,7 +33,7 @@ namespace RentalSoftware
             }
             catch(Exception ex)
             {
-
+                Response.Write("there is an error:" + ex);
             }
         }
         public void clear()
