@@ -7,9 +7,9 @@
            <div class="row">
         <div class="col-md-6">
             <div class ="row-m-2">
-            <div class="form-group">
-                <asp:Button ID="BtnNew" runat="server" Text="New" OnClick="BtnNew_Click" CssClass="form-control" />
-            </div>
+            
+                <asp:Button ID="BtnNew" runat="server" Text="New" OnClick="BtnNew_Click" CssClass="btn-active" />
+            
                 </div>
         </div>
     </div>
@@ -28,12 +28,13 @@
                 
                 </div>
                 <div class ="col-md-4">
-                     <asp:Label ID="Label4" runat="server" Text="Search"></asp:Label>
+                    <asp:Button ID="BtnSearch" runat="server" Text="Search" CssClass="btn-info"/>
+                     
                 </div>
             </div>
                 <div class="row">
                     <div class="col-md-12">
-                         <asp:GridView ID="GridViewRental" runat="server" OnSelectedIndexChanged="GridViewRental_SelectedIndexChanged"  CssClass="table table-dark">
+                         <asp:GridView ID="GridViewRental" runat="server" CssClass="table table-active">
             </asp:GridView>
                         </div>
                 </div>
