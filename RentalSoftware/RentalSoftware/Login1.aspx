@@ -22,19 +22,24 @@
         <div class="form-group">
 
             <asp:Label ID="LabelPassword" runat="server" Text="Password"></asp:Label>
-            <asp:TextBox ID="TxtPassword" runat="server" CssClass="form-control"></asp:TextBox>
+            <asp:TextBox ID="TxtPassword" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
         </div>
 
 
             <div class="row-m-2">
                 <div class="col-md-12">
-                    <asp:Button ID="BtnLogin" runat="server" Text="Login" OnClick="BtnLogin_Click" CssClass="btn-info" />
-
-
-                    <asp:Button ID="BtnCancel" runat="server" Text="Cancel"  CssClass="btn-info"/>
+                    <asp:Button ID="BtnLogin" runat="server" Text="Login" OnClick="BtnLogin_Click" CssClass=" btn btn-info" />
+                    
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    
+                        <asp:Button ID="BtnCancel" runat="server" Text="Cancel" CssClass=" btn btn-info" />
+                   
                 </div>
             </div>
         </div>
+        
+        <p>
+            &nbsp;</p>
         
     </form>
 </body>
