@@ -8,9 +8,10 @@
                 <div class="card-body">
                     <div class="form-group">
             <asp:Label ID="Label1" runat="server" Text="RentTransactionNo"></asp:Label>
-            <asp:TextBox ID="TxtRentTransno" runat="server" CssClass="form-control"></asp:TextBox>
+            <asp:TextBox ID="TxtRentTransno" runat="server" CssClass="form-control" Width="550px"></asp:TextBox>
         </div>
-    </div>
+                    </div>
+    
         <div class="col-sm-12">
             <div class="form-group">
             <asp:Label ID="Label6" runat="server" Text="ItemName"></asp:Label>
@@ -37,15 +38,16 @@
                         <asp:TextBox ID="TxtEnd" runat="server" TextMode="Date" CssClass="form-control"></asp:TextBox>
                     </div>
     </div>    
-                </div>
+                    </div>
+                
             </div>
         
-    <div class="row m-12">
-        <div class="col-sm-12">
-            
-          <asp:Button ID="BtnSave" runat="server" Text="Save" OnClick="BtnSave_Click" />
+    <div class="row-m-2">
+        <div class="col-md-12">
+           
+          <asp:Button ID="BtnSave" runat="server" Text="Save" OnClick="BtnSave_Click" CssClass="btn active" />
             &nbsp;&nbsp;
-    <asp:Button ID="BtnCancel" runat="server" Text="Cancel" OnClick="BtnCancel_Click" Width="78px"  />
+    <asp:Button ID="BtnCancel" runat="server" Text="Cancel" OnClick="BtnCancel_Click" Width="78px" CssClass="btn active"  />
             &nbsp;
     <asp:Label ID="Lblitem" runat="server" Visible="False"></asp:Label>
         </div>

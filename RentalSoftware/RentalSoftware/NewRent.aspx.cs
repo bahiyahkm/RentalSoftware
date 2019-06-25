@@ -55,8 +55,7 @@ namespace RentalSoftware
         {
             CommonFunction objcmn = new CommonFunction();
             TxtRentTransno.Text = objcmn.GenerateRentTransNo();
-            DropDownList1.Text = "-----Select ItemName-------";
-            DropDownList2.Text = "------Select CustomerName-----";
+            
         }
 
         protected void BtnSave_Click(object sender, EventArgs e)

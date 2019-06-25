@@ -27,9 +27,9 @@
         <div class="row m-2">
             <div class="col-md-12">
 
-                <asp:Button ID="BtnAdd" runat="server" Text="Add" OnClick="BtnAdd_Click" ValidationGroup="b" />
+                <asp:Button ID="BtnAdd" runat="server" Text="Add" OnClick="BtnAdd_Click" ValidationGroup="b" CssClass="btn active" />
                 &nbsp;&nbsp;&nbsp;
-            <asp:Button ID="BtnCancel" runat="server" Text="Cancel" OnClick="BtnCancel_Click" />
+            <asp:Button ID="BtnCancel" runat="server" Text="Cancel" OnClick="BtnCancel_Click" CssClass="btn active" />
                 &nbsp;&nbsp;&nbsp;<asp:Label ID="LblMessage" runat="server" Visible="False"></asp:Label>
             </div>
 
