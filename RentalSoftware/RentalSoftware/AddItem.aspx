@@ -33,7 +33,7 @@
                         <div class="col-md-3">
                              <div class="form-group">
                                  <asp:Label ID="Label2" runat="server" Text="RentRate"></asp:Label>
-            <asp:TextBox ID="TxtRentrate" runat="server" CssClass="form-control" TextMode="Number"></asp:TextBox>
+            <asp:TextBox ID="TxtRentrate" runat="server" CssClass="form-control text-right" TextMode="Number"></asp:TextBox>
                                  </div>
                         </div>
                         </div>
@@ -41,7 +41,7 @@
                         <div class="col-md-3">
                              <div class="form-group">
                                    <asp:Label ID="Label3" runat="server" Text="Quantity"></asp:Label>
-    <asp:TextBox ID="TxtQuantity" runat="server" CssClass="form-control"></asp:TextBox>
+    <asp:TextBox ID="TxtQuantity" runat="server" CssClass="form-control text-right"></asp:TextBox>
                                  </div>
                         </div>
                         </div>
