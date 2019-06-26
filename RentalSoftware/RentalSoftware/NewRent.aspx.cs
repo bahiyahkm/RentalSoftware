@@ -43,8 +43,9 @@ namespace RentalSoftware
             DropDownList1.DataTextField = "ItemName";
             DropDownList1.DataValueField = "ItemId";
             DropDownList1.DataBind();
+                TxtCurrentdate.Text= DateTime.Now.ToLongDateString();
 
-                
+
             }
         }
         
@@ -93,6 +94,11 @@ namespace RentalSoftware
         protected void BtnCancel_Click(object sender, EventArgs e)
         {
             Response.Redirect("RentalSystem.aspx");
+        }
+
+        protected void TxtCurrentdate_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

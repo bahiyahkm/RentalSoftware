@@ -29,7 +29,7 @@
                     <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
-                                <asp:Label ID="Label6" runat="server" Text="ItemName"></asp:Label>
+                                <asp:Label ID="Label6" runat="server" Text="Item Name"></asp:Label>
                                 <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" CssClass="form-control">
                                 </asp:DropDownList>
                             </div>
@@ -38,7 +38,7 @@
                     <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
-                                <asp:Label ID="Label7" runat="server" Text="CustomerName"></asp:Label>
+                                <asp:Label ID="Label7" runat="server" Text="Customer Name"></asp:Label>
                                 <asp:DropDownList ID="DropDownList2" runat="server" CssClass="form-control">
                                 </asp:DropDownList>
                             </div>
@@ -47,7 +47,7 @@
                     <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
-                                <asp:Label ID="Label8" runat="server" Text="StartDate"></asp:Label>
+                                <asp:Label ID="Label8" runat="server" Text="Start Date"></asp:Label>
                                 <asp:TextBox ID="TxtStart" runat="server" TextMode="Date" CssClass="form-control"></asp:TextBox>
                             </div>
                         </div>
@@ -55,8 +55,16 @@
                     <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
-                                <asp:Label ID="Label9" runat="server" Text="EndDate"></asp:Label>
+                                <asp:Label ID="Label9" runat="server" Text="End Date"></asp:Label>
                                 <asp:TextBox ID="TxtEnd" runat="server" TextMode="Date" CssClass="form-control"></asp:TextBox>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <asp:Label ID="Label10" runat="server" Text="Current Date"></asp:Label>
+                                <asp:TextBox ID="TxtCurrentdate" runat="server" CssClass="form-control" OnLoad="TxtCurrentdate_Load"></asp:TextBox>
                             </div>
                         </div>
                     </div>
