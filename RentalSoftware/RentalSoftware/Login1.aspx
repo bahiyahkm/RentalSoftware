@@ -32,7 +32,7 @@
                     
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     
-                        <asp:Button ID="BtnCancel" runat="server" Text="Cancel" CssClass=" btn btn-info" />
+                        <asp:Button ID="BtnCancel" runat="server" Text="Cancel" CssClass=" btn btn-info" OnClick="BtnCancel_Click" />
                    
                 </div>
             </div>

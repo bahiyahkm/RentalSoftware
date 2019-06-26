@@ -7,8 +7,8 @@
             <h1 class="h3 mb-0 text-gray-800">Add Customer</h1>
           </div>
 
-     <div class="row">
-         <div class="col-md-12">
+    <div class="row">
+        <div class="col-md-12">
              <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -67,21 +67,21 @@
                         </div>
                         </div>
                      <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-2">
                              <div class="form-group">
                                   <asp:Button ID="BtnAdd" runat="server" Text="Add" OnClick="BtnAdd_Click" CssClass="form-control" />
                                  </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-2">
                                 <div class="form-group">
-                                <asp:Button ID="BtnCancel" runat="server" Text="Cancel" OnClick="BtnCancel_Click" CssClass="form-control" />
+                                <asp:Button ID="BtnCancel" runat="server" Text="Cancel" OnClick="BtnCancel_Click" CssClass="form-control " />
                                  <asp:Label ID="LblMessage" runat="server" Text="Label" Visible="False"></asp:Label>
                                     </div>
                             </div>
                         
-                       </div>
-                  
-            </div>
+    </div>
+
+    </div>
                
         </div>
     </div>

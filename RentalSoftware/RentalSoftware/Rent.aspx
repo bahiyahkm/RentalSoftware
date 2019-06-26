@@ -16,7 +16,7 @@
                   <h6 class="m-0 font-weight-bold text-primary">Rent Details</h6>
                   <div class="dropdown no-arrow">
                     <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                      
                     </a>
                   <div class="col-md-3">
                       <asp:Button ID="BtnNew" runat="server" Text="New" OnClick="BtnNew_Click" CssClass="btn btn-info"  />
@@ -55,60 +55,5 @@
                 </div>
               </div>
          </div>
-        </div>
-
-
-
-    <div class="col-md-12">
-           <div class="row">
-        <div class="col-md-6">
-            <div class ="row-m-2">
-            
-                
-            
-                </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            
-            <div class="row mb-2">
-                <div class="col-md-2">
-                    <div class="row">
-                    
-               
-                </div>
-                    </div>
-               <div class ="col-md-3">
-                   <div class="row">
-                    
-                </div>
-                   </div>
-                <div class="col-md-6">
-                    <div class="row">
-                        
-                   
-                    
-                     </div>
-                    </div>
-                <div class ="col-md-12">
-                    <div class="row">
-                     
-                     </div>
-                    </div>
-            </div>
-                <div class="row">
-                    <div class="col-md-12">
-                       
-                        </div>
-                </div>
-               
-              
-                    
-            </div>
-           
-        </div>
-    </div>
- 
-  
+        </div> 
 </asp:Content>

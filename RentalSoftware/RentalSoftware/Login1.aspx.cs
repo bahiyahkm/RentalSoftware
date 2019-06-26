@@ -24,15 +24,21 @@ namespace RentalSoftware
             dt = objaccount.Login(TxtUsername.Text, TxtPassword.Text);
             if (dt.Rows.Count > 0)
             {
+                Session["username"] = TxtUsername.Text;
                 Response.Redirect("RentalSystem.aspx");
-                TxtUsername.Text = " ";
-                TxtPassword.Text = "";
+                
             }
 
             else
             {
                 Response.Write("Login Failed");
             }
+        }
+
+        protected void BtnCancel_Click(object sender, EventArgs e)
+        {
+
+           
         }
     }
 }
