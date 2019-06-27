@@ -46,10 +46,7 @@ namespace RentalSoftware
 
         protected void BtnSubmit_Click(object sender, EventArgs e)
         {
-            
-            
-                Lblstatus.Text = "Returned the item";
-            
+            Lblstatus.Text = "Returned the item"; 
             
         }
     }
