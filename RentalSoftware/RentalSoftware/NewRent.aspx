@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
- <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">Add RentDetails</h1>
           </div>
 
@@ -48,7 +48,7 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 <asp:Label ID="Label8" runat="server" Text="Start Date"></asp:Label>
-                                <asp:TextBox ID="TxtStart" runat="server" TextMode="Date" CssClass="form-control"></asp:TextBox>
+                                <asp:TextBox ID="TxtStart" runat="server" TextMode="Date" CssClass="form-control" OnTextChanged="TxtStart_TextChanged"></asp:TextBox>
                             </div>
                         </div>
                     </div>

@@ -1688,7 +1688,7 @@
     <Content Include="vendor\jquery\jquery.min.js" />
     <Content Include="vendor\jquery\jquery.slim.js" />
     <Content Include="vendor\jquery\jquery.slim.min.js" />
-    <Content Include="ViewDue.aspx" />
+    <Content Include="ViewReturn.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -1776,12 +1776,12 @@
     <Compile Include="TestForm.aspx.designer.cs">
       <DependentUpon>TestForm.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ViewDue.aspx.cs">
-      <DependentUpon>ViewDue.aspx</DependentUpon>
+    <Compile Include="ViewReturn.aspx.cs">
+      <DependentUpon>ViewReturn.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ViewDue.aspx.designer.cs">
-      <DependentUpon>ViewDue.aspx</DependentUpon>
+    <Compile Include="ViewReturn.aspx.designer.cs">
+      <DependentUpon>ViewReturn.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

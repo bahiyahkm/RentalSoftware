@@ -21,6 +21,8 @@
                   <div class="col-md-3">
                       <asp:Button ID="BtnNew" runat="server" Text="New" OnClick="BtnNew_Click" CssClass="btn btn-info"  />
                   </div>
+                                               
+                     
                   </div>
                 </div>
                 <!-- Card Body -->
@@ -44,6 +46,9 @@
                         <div class="col-md-3">
                              <asp:Button ID="BtnSearch" runat="server" Text="Search" CssClass=" btn btn-active mt-3"/>
                             
+                        </div>
+                        <div class="col-md-3">
+                            <asp:Button ID="BtnReturn" runat="server" Text="Return" CssClass="btn btn-active mt-3" OnClick="BtnReturn_Click" />
                         </div>
                     </div>
                     <div class="row">

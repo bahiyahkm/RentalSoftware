@@ -76,5 +76,10 @@ namespace RentalSoftware
 
 
         }
+
+        protected void BtnReturn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ViewReturn.aspx");
+        }
     }
 }

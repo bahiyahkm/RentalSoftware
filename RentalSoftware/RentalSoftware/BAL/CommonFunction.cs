@@ -18,6 +18,7 @@ namespace RentalSoftware.BAL
             int Year = DateTime.Now.Year;
             return "" + prefix + "" + random + "" + day + "" + Month + "" + Year + "";
         }
+        
 
     }
 }
