@@ -16,12 +16,17 @@ namespace RentalSoftware.BAL
             int i = db.InsertData(sql);
             return i;
         }
-        public DataTable GetAllRentDetails()
+        public DataTable GetAllRentDetailsById(int id)
         {
 
-            string sql = "select  rental_tbl.TransactionNo,item_tbl.ItemName,customer_tbl.CustomerName,rental_tbl.StartDate,rental_tbl.EndDate,rental_tbl.Price from rental_tbl inner join item_tbl on item_tbl.ItemId=rental_tbl.ItemId inner join  customer_tbl on customer_tbl.CustomerId=rental_tbl.CustomerId ";
+            string sql = "select rental_tbl.RentId, rental_tbl.TransactionNo,item_tbl.ItemName,customer_tbl.CustomerName,rental_tbl.StartDate,rental_tbl.EndDate,rental_tbl.Price from rental_tbl inner join item_tbl on item_tbl.ItemId=rental_tbl.ItemId inner join  customer_tbl on customer_tbl.CustomerId=rental_tbl.CustomerId where rental_tbl.RentId='"+id+"' ";
             return db.GetData(sql);
 
+        }
+        public DataTable GetAllRentDetails()
+        {
+            string sql = "select rental_tbl.RentId, rental_tbl.TransactionNo,item_tbl.ItemName,customer_tbl.CustomerName,rental_tbl.StartDate,rental_tbl.EndDate,rental_tbl.Price from rental_tbl inner join item_tbl on item_tbl.ItemId=rental_tbl.ItemId inner join  customer_tbl on customer_tbl.CustomerId=rental_tbl.CustomerId ";
+            return db.GetData(sql);
         }
         public DataTable GetRentToGrid(int itemid)
         {
@@ -30,7 +35,7 @@ namespace RentalSoftware.BAL
         }
         public DataTable GetNameToGrid(string customer)
         {
-            string sql = "select  rental_tbl.TransactionNo,item_tbl.ItemName,customer_tbl.CustomerName,rental_tbl.StartDate,rental_tbl.EndDate,rental_tbl.Price from rental_tbl inner join item_tbl on item_tbl.ItemId=rental_tbl.ItemId inner join  customer_tbl on customer_tbl.CustomerId=rental_tbl.CustomerId where customer_tbl.CustomerName LIKE '" + customer+"%' ";
+            string sql = "select  rental_tbl.RentId,rental_tbl.TransactionNo,item_tbl.ItemName,customer_tbl.CustomerName,rental_tbl.StartDate,rental_tbl.EndDate,rental_tbl.Price from rental_tbl inner join item_tbl on item_tbl.ItemId=rental_tbl.ItemId inner join  customer_tbl on customer_tbl.CustomerId=rental_tbl.CustomerId where customer_tbl.CustomerName LIKE '" + customer+"%' ";
             return db.GetData(sql);
         }
 

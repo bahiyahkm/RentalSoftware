@@ -44,16 +44,51 @@
                             </div>
                         </div>
                         <div class="col-md-3">
-                             <asp:Button ID="BtnSearch" runat="server" Text="Search" CssClass=" btn btn-active mt-3"/>
+                             <asp:Button ID="BtnSearch" runat="server" Text="Search" CssClass=" btn btn-active mt-3" />
                             
                         </div>
-                        <div class="col-md-3">
-                            <asp:Button ID="BtnReturn" runat="server" Text="Return" CssClass="btn btn-active mt-3" OnClick="BtnReturn_Click" />
-                        </div>
+                        
                     </div>
                     <div class="row">
                         <div class="col-md-10">
-                              <asp:GridView ID="GridViewRental" runat="server" CssClass="table table-active">
+                              <asp:GridView ID="GridViewRental" runat="server" CssClass="table table-active" AutoGenerateColumns="False" OnSelectedIndexChanged="GridViewRental_SelectedIndexChanged1" OnRowCommand="GridViewRental_RowCommand">
+                                  <Columns>
+                                      <asp:TemplateField HeaderText="TransactionNo">
+                                          <ItemTemplate>
+                                              <asp:Label ID="Label4" runat="server" Text='<%# Eval("TransactionNo") %>'></asp:Label>
+                                          </ItemTemplate>
+                                      </asp:TemplateField>
+                                      <asp:TemplateField HeaderText="ItemName">
+                                          <ItemTemplate>
+                                              <asp:Label ID="Label5" runat="server" Text='<%# Eval("ItemName") %>'></asp:Label>
+                                          </ItemTemplate>
+                                      </asp:TemplateField>
+                                      <asp:TemplateField HeaderText="CustomerName">
+                                          <ItemTemplate>
+                                              <asp:Label ID="Label6" runat="server" Text='<%# Eval("CustomerName") %>'></asp:Label>
+                                          </ItemTemplate>
+                                      </asp:TemplateField>
+                                      <asp:TemplateField HeaderText="StartDate">
+                                          <ItemTemplate>
+                                              <asp:Label ID="Label7" runat="server" Text='<%# Eval("StartDate") %>'></asp:Label>
+                                          </ItemTemplate>
+                                      </asp:TemplateField>
+                                      <asp:TemplateField HeaderText="EndDate">
+                                          <ItemTemplate>
+                                              <asp:Label ID="Label8" runat="server" Text='<%# Eval("EndDate") %>'></asp:Label>
+                                          </ItemTemplate>
+                                      </asp:TemplateField>
+                                      <asp:TemplateField HeaderText="Price">
+                                          <ItemTemplate>
+                                              <asp:Label ID="Label9" runat="server" Text='<%# Eval("Price") %>'></asp:Label>
+                                          </ItemTemplate>
+                                      </asp:TemplateField>
+                                      <asp:TemplateField>
+                                          <ItemTemplate>
+                                              <asp:LinkButton ID="LBreturn" runat="server" OnClick="LBreturn_Click" CommandArgument='<%# Eval("RentId") %>' CommandName="Return">Return</asp:LinkButton>
+                                          </ItemTemplate>
+                                      </asp:TemplateField>
+                                  </Columns>
             </asp:GridView>
                         </div>
                     </div>

@@ -14,11 +14,13 @@ namespace RentalSoftware.DAL
         public DbConnection() { }
         public SqlConnection GetConnection()
         {
-            string ConStr = ConfigurationManager.ConnectionStrings["c1"].ToString();
+           
+                string ConStr = ConfigurationManager.ConnectionStrings["c1"].ToString();
 
-            con = new SqlConnection(ConStr);
-            return con;
-
+                con = new SqlConnection(ConStr);
+                return con;
+            
+           
         }
         public DataTable GetData(string sql)
         {
@@ -28,16 +30,18 @@ namespace RentalSoftware.DAL
             adp.Fill(dt);
             return dt;
         }
-
+        
         public int InsertData(string sql)
-        {
-
-
+        { 
             SqlCommand cmd = new SqlCommand(sql, GetConnection());
             con.Open();
             int i = cmd.ExecuteNonQuery();
             con.Close();
             return i;
+
         }
     }
+   
+   
+
 }

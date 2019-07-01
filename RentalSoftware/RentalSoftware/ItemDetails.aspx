@@ -23,7 +23,55 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-10">
-                            <asp:GridView ID="GridViewItem" runat="server" CssClass="table table-active">
+                            <asp:GridView ID="GridViewItem" runat="server" CssClass="table table-active" AutoGenerateColumns="False" OnRowCommand="GridViewItem_RowCommand" OnRowDeleting="GridViewItem_RowDeleting" OnRowEditing="GridViewItem_RowEditing" OnRowUpdating="GridViewItem_RowUpdating" OnSelectedIndexChanged="GridViewItem_SelectedIndexChanged1">
+                                <Columns>
+                                    <asp:TemplateField HeaderText="Item Name">
+                                        <EditItemTemplate>
+                                            <asp:TextBox ID="txtEditItemName" runat="server" Text='<%# Eval("ItemName") %>'></asp:TextBox>
+                                            <br />
+                                            <asp:HiddenField ID="hdItemId" runat="server" Value='<%# Eval("ItemId") %>' />
+                                        </EditItemTemplate>
+                                        <ItemTemplate>
+                                            <asp:Label ID="Label1" runat="server" Text='<%# Eval("ItemName") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Unit Rate">
+                                        <EditItemTemplate>
+                                            <asp:TextBox ID="txtrentrate" runat="server" Text='<%# Eval("RentRate") %>'></asp:TextBox>
+                                            <br />
+                                            <%--<asp:HiddenField ID="hdItemrate" runat="server" Value='<%# Eval("ItemId") %>' />--%>
+                                        </EditItemTemplate>
+                                        <ItemTemplate>
+                                            <asp:Label ID="Label2" runat="server" Text='<%# Eval("RentRate") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Qty">
+                                        <EditItemTemplate>
+                                            <asp:TextBox ID="txtquantity" runat="server" Text='<%# Eval("Quantity") %>'></asp:TextBox>
+                                            <br />
+                                           <%-- <asp:HiddenField ID="hdItemqty" runat="server" Value='<%# Eval("ItemId") %>' />--%>
+                                        </EditItemTemplate>
+                                        <ItemTemplate>
+                                            <asp:Label ID="Label3" runat="server" Text='<%# Eval("Quantity") %>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField>
+                                        <EditItemTemplate>
+                                            <asp:LinkButton ID="LinkButton3" runat="server" CommandArgument='<%# Eval("ItemId") %>' CommandName="Update">Update</asp:LinkButton>
+                                        </EditItemTemplate>
+                                        <ItemTemplate>
+                                            <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("ItemId") %>' CommandName="Edit">Edit</asp:LinkButton>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField>
+                                        <EditItemTemplate>
+                                            <br />
+                                        </EditItemTemplate>
+                                        <ItemTemplate>
+                                            <asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# Eval("ItemId") %>' CommandName="dlt" >Delete</asp:LinkButton>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                </Columns>
                             </asp:GridView>
                         </div>
                     </div>

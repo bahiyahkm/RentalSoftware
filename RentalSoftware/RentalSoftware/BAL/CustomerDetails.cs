@@ -43,5 +43,16 @@ namespace RentalSoftware.BAL
             string sql = "select * from customer_tbl where CustomerName=" + custid + "";
             return db.GetData(sql);
         }
+        public int UpdateCustomer(string sql)
+        {
+            int i = db.InsertData(sql);
+            return i;
+        }
+        public int DeleteCustomer(string sql)
+        {
+
+            int i = db.InsertData(sql);
+            return i;
+        }
     }
 }

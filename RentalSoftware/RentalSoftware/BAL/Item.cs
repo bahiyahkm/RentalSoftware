@@ -24,7 +24,7 @@ namespace RentalSoftware.BAL
         }
         public DataTable GetItemById(int itemid)
         {
-            string sql = "select * from item_tbl where ItemId=" + itemid+ "";
+            string sql = "select * from item_tbl where ItemId=" + itemid + "";
             return db.GetData(sql);
         }
         public DataTable GetItemToGrid(string item)
@@ -32,5 +32,18 @@ namespace RentalSoftware.BAL
             string sql = "select * from item_tbl where ItemName='" + item + "'";
             return db.GetData(sql);
         }
+        public int UpdateItem(string sql)
+        {
+            int i = db.InsertData(sql);
+            return i;
+        }
+        public int DeleteItem(string sql)
+        {
+
+            int i = db.InsertData(sql);
+            return i;
+        }
+
+
     }
 }

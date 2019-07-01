@@ -77,9 +77,29 @@ namespace RentalSoftware
 
         }
 
-        protected void BtnReturn_Click(object sender, EventArgs e)
+        protected void LBreturn_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ViewReturn.aspx");
+
+           
+            
+        }
+
+        protected void GridViewRental_SelectedIndexChanged1(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void GridViewRental_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "Return")
+            {
+                int rentId = Convert.ToInt32(e.CommandArgument);
+       
+                Response.Redirect("ViewReturn.aspx?id=" + rentId);
+
+
+
+            }
         }
     }
 }

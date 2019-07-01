@@ -15,23 +15,20 @@ namespace RentalSoftware
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            int id = Convert.ToInt32(Request.QueryString["id"]);
+            
+           
+            
+
             TxtCurrentdate.Text = DateTime.Now.ToLongDateString();
-            // TxtEntrydate.Text =objrent.GetAllRentDetails()
-            DataTable dt = objrent.GetAllRentDetails();
+            DataTable dt = objrent.GetAllRentDetailsById(id);
             if (dt.Rows.Count > 0)
             {
                 TxtEntrydate.Text = dt.Rows[0]["StartDate"].ToString();
+                TxtDuedate.Text = dt.Rows[0]["EndDate"].ToString();
+                TxtItemprice.Text = dt.Rows[0]["Price"].ToString();
             }
-            DataTable dt_due = objrent.GetAllRentDetails();
-            if (dt_due.Rows.Count > 0)
-            {
-                TxtDuedate.Text = dt_due.Rows[0]["EndDate"].ToString();
-            }
-            DataTable dt_price = objrent.GetAllRentDetails();
-            if (dt_price.Rows.Count > 0)
-            {
-                TxtItemprice.Text = dt_price.Rows[0]["Price"].ToString();
-            }
+            
             DateTime firtsDate = Convert.ToDateTime(TxtCurrentdate.Text);
             DateTime secondDate = Convert.ToDateTime(TxtEntrydate.Text);
             TimeSpan diffresult = firtsDate.Subtract(secondDate);

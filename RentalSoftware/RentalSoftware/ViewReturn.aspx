@@ -53,7 +53,7 @@
                         <div class="col-md-3">
                              <div class="form-group">
                                  <asp:Label ID="Label4" runat="server" Text="Item Price"></asp:Label>
-                                 <asp:TextBox ID="TxtItemprice" runat="server" CssClass="form-control"></asp:TextBox>
+                                 <asp:TextBox ID="TxtItemprice" runat="server" CssClass="form-control text-right"></asp:TextBox>
                                  <asp:Label ID="Lblprice" runat="server" Text="" Visible="false"></asp:Label>
                                  </div>
                         </div>
@@ -62,7 +62,7 @@
                         <div class="col-md-3">
                              <div class="form-group">
                                  <asp:Label ID="Label5" runat="server" Text="Due Amount"></asp:Label>
-                                 <asp:TextBox ID="TxtDueamount" runat="server" CssClass="form-control"></asp:TextBox>
+                                 <asp:TextBox ID="TxtDueamount" runat="server" CssClass="form-control text-right"></asp:TextBox>
                                  </div>
                         </div>
                         </div>
