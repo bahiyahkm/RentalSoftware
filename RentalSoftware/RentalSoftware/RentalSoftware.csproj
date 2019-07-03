@@ -74,6 +74,7 @@
     <Content Include="AddCustomer.aspx" />
     <Content Include="AddItem.aspx" />
     <Content Include="blank.html" />
+    <Content Include="Control.aspx" />
     <Content Include="css\bootstrap-grid.css" />
     <Content Include="css\bootstrap-grid.min.css" />
     <Content Include="css\bootstrap-reboot.css" />
@@ -1716,6 +1717,13 @@
     <Compile Include="BAL\CustomerDetails.cs" />
     <Compile Include="BAL\Item.cs" />
     <Compile Include="BAL\RentDetails.cs" />
+    <Compile Include="Control.aspx.cs">
+      <DependentUpon>Control.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control.aspx.designer.cs">
+      <DependentUpon>Control.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Customer.aspx.cs">
       <DependentUpon>Customer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

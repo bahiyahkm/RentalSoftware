@@ -93,7 +93,7 @@ namespace RentalSoftware
 
         protected void BtnCancel_Click(object sender, EventArgs e)
         {
-            Response.Redirect("RentalSystem.aspx");
+            Response.Redirect("NewRent.aspx");
         }
 
         protected void TxtCurrentdate_Load(object sender, EventArgs e)

@@ -45,7 +45,7 @@ namespace RentalSoftware
 
         protected void BtnCancel_Click(object sender, EventArgs e)
         {
-            Response.Redirect("RentalSystem.aspx");
+            Response.Redirect("AddItem.aspx");
         }
     }
 }

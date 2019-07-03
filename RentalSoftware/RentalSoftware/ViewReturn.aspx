@@ -74,7 +74,6 @@
                             
                         </div>
                            <div class="col-md-10">
-                                <asp:Label ID="Lblstatus" runat="server" Text="Status"></asp:Label>
                             </div>
                            <asp:HiddenField ID="hdRentId" runat="server" />
                         </div>
