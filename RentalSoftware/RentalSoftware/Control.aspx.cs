@@ -11,10 +11,7 @@ namespace RentalSoftware
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(Session["username"]!=null)
-            {
-                Label1.Text = "Sorry your session has been expired";
-            }
+           
         }
 
         protected void Button1_Click(object sender, EventArgs e)
