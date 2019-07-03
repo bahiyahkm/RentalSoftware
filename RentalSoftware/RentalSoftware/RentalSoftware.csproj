@@ -84,6 +84,7 @@
     <Content Include="css\sb-admin-2.css" />
     <Content Include="css\sb-admin-2.min.css" />
     <Content Include="Customer.aspx" />
+    <Content Include="dashboard.aspx" />
     <Content Include="img\undraw_posting_photo.svg" />
     <Content Include="ItemDetails.aspx" />
     <Content Include="js\bootstrap.bundle.js" />
@@ -1723,6 +1724,13 @@
       <DependentUpon>Customer.aspx</DependentUpon>
     </Compile>
     <Compile Include="DAL\DbConnection.cs" />
+    <Compile Include="dashboard.aspx.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dashboard.aspx.designer.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ItemDetails.aspx.cs">
       <DependentUpon>ItemDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

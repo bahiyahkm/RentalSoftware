@@ -60,23 +60,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <asp:Label ID="Label10" runat="server" Text="Current Date"></asp:Label>
-                                <asp:TextBox ID="TxtCurrentdate" runat="server" CssClass="form-control" OnLoad="TxtCurrentdate_Load"></asp:TextBox>
-                            </div>
-                        </div>
-                    </div>
+                    
                     <div class="row">
                         <div class="col-md-2">
                             <div class="form-group">
-                                <asp:Button ID="BtnSave" runat="server" Text="Save" OnClick="BtnSave_Click" CssClass="form-control" />
+                                <asp:Button ID="BtnSave" runat="server" Text="Save" OnClick="BtnSave_Click" CssClass="form-control btn btn-outline-primary" />
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="form-group">
-                                <asp:Button ID="BtnCancel" runat="server" Text="Cancel" OnClick="BtnCancel_Click" CssClass="form-control" />
+                                <asp:Button ID="BtnCancel" runat="server" Text="Cancel" OnClick="BtnCancel_Click" CssClass="form-control btn btn-outline-primary" />
                                 <asp:Label ID="Lblitem" runat="server" Visible="False"></asp:Label>
                             </div>
                         </div>

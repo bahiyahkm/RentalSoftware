@@ -15,7 +15,14 @@ namespace RentalSoftware
         Accounts objaccount = new Accounts();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(!Page.IsPostBack)
+            {
+                
+                Session["username"] = null;
+                Session.Abandon();
+                Session.Clear();
+                
+            }
         }
 
         protected void BtnLogin_Click(object sender, EventArgs e)
@@ -34,12 +41,7 @@ namespace RentalSoftware
                 Response.Write("Login Failed");
             }
         }
-
-        protected void BtnCancel_Click(object sender, EventArgs e)
-        {
-
-          
-          
-        }
+       
+        
     }
 }

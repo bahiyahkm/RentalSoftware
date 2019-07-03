@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
- <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">Return Details</h1>
           </div>
 
@@ -69,13 +69,14 @@
                        <div class="row">
                         <div class="col-md-3">
                              <div class="form-group">
-                                 <asp:Button ID="BtnSubmit" runat="server" Text="Submit" CssClass="form-control" OnClick="BtnSubmit_Click" />
+                                 <asp:Button ID="BtnSubmit" runat="server" Text="Submit" CssClass="form-control btn btn-outline-primary" OnClick="BtnSubmit_Click" />
                                  </div>
                             
                         </div>
                            <div class="col-md-10">
                                 <asp:Label ID="Lblstatus" runat="server" Text="Status"></asp:Label>
                             </div>
+                           <asp:HiddenField ID="hdRentId" runat="server" />
                         </div>
                       </div>
                  </div>

@@ -51,7 +51,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-10">
-                              <asp:GridView ID="GridViewRental" runat="server" CssClass="table table-active" AutoGenerateColumns="False" OnSelectedIndexChanged="GridViewRental_SelectedIndexChanged1" OnRowCommand="GridViewRental_RowCommand">
+                              <asp:GridView ID="GridViewRental" runat="server" CssClass="table table-active" AutoGenerateColumns="False" OnRowCommand="GridViewRental_RowCommand" OnSelectedIndexChanged="GridViewRental_SelectedIndexChanged1">
                                   <Columns>
                                       <asp:TemplateField HeaderText="TransactionNo">
                                           <ItemTemplate>
@@ -85,7 +85,7 @@
                                       </asp:TemplateField>
                                       <asp:TemplateField>
                                           <ItemTemplate>
-                                              <asp:LinkButton ID="LBreturn" runat="server" OnClick="LBreturn_Click" CommandArgument='<%# Eval("RentId") %>' CommandName="Return">Return</asp:LinkButton>
+                                              <asp:LinkButton ID="LBreturn" runat="server" CommandArgument='<%# Eval("RentId") %>' CommandName="Return">Return</asp:LinkButton>
                                           </ItemTemplate>
                                       </asp:TemplateField>
                                   </Columns>

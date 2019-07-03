@@ -48,12 +48,12 @@
                      <div class="row">
                         <div class="col-md-2">
                              <div class="form-group">
-                                 <asp:Button ID="BtnAdd" runat="server" Text="Add" OnClick="BtnAdd_Click" ValidationGroup="b" CssClass="form-control" />
+                                 <asp:Button ID="BtnAdd" runat="server" Text="Add" OnClick="BtnAdd_Click" ValidationGroup="b" CssClass="form-control btn btn-outline-primary" />
                                  </div>
                             </div>
                             <div class="col-md-2">
                                 <div class="form-group">
-                                 <asp:Button ID="BtnCancel" runat="server" Text="Cancel" OnClick="BtnCancel_Click" CssClass="form-control" />
+                                 <asp:Button ID="BtnCancel" runat="server" Text="Cancel" OnClick="BtnCancel_Click" CssClass="form-control btn btn-outline-primary" />
                                  <asp:Label ID="LblMessage" runat="server" Visible="False"></asp:Label>
                                     </div>
                             </div>

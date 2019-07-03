@@ -23,7 +23,7 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-10">
-                            <asp:GridView ID="GridViewItem" runat="server" CssClass="table table-active" AutoGenerateColumns="False" OnRowCommand="GridViewItem_RowCommand" OnRowDeleting="GridViewItem_RowDeleting" OnRowEditing="GridViewItem_RowEditing" OnRowUpdating="GridViewItem_RowUpdating" OnSelectedIndexChanged="GridViewItem_SelectedIndexChanged1">
+                            <asp:GridView ID="GridViewItem" runat="server" CssClass="table table-active" AutoGenerateColumns="False" OnRowCommand="GridViewItem_RowCommand" OnRowEditing="GridViewItem_RowEditing" OnRowUpdating="GridViewItem_RowUpdating">
                                 <Columns>
                                     <asp:TemplateField HeaderText="Item Name">
                                         <EditItemTemplate>
@@ -68,7 +68,7 @@
                                             <br />
                                         </EditItemTemplate>
                                         <ItemTemplate>
-                                            <asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# Eval("ItemId") %>' CommandName="dlt" >Delete</asp:LinkButton>
+                                            <asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# Eval("ItemId") %>' CommandName="dlt">Delete</asp:LinkButton>
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                 </Columns>

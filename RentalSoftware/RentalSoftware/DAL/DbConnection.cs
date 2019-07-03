@@ -10,18 +10,23 @@ namespace RentalSoftware.DAL
 {
     public class DbConnection
     {
+        
         public SqlConnection con;
         public DbConnection() { }
+    
         public SqlConnection GetConnection()
         {
-           
-                string ConStr = ConfigurationManager.ConnectionStrings["c1"].ToString();
-
-                con = new SqlConnection(ConStr);
-                return con;
             
-           
+            string ConStr = ConfigurationManager.ConnectionStrings["c1"].ToString();
+
+            con = new SqlConnection(ConStr);
+            return con;
+            
+
         }
+    
+    
+    
         public DataTable GetData(string sql)
         {
 

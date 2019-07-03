@@ -77,17 +77,9 @@ namespace RentalSoftware
 
         }
 
-        protected void LBreturn_Click(object sender, EventArgs e)
-        {
+        
 
-           
-            
-        }
-
-        protected void GridViewRental_SelectedIndexChanged1(object sender, EventArgs e)
-        {
-
-        }
+        
 
         protected void GridViewRental_RowCommand(object sender, GridViewCommandEventArgs e)
         {
@@ -100,6 +92,11 @@ namespace RentalSoftware
 
 
             }
+        }
+
+        protected void GridViewRental_SelectedIndexChanged1(object sender, EventArgs e)
+        {
+
         }
     }
 }

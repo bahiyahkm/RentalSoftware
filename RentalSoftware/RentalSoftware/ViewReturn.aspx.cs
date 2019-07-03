@@ -16,7 +16,7 @@ namespace RentalSoftware
         protected void Page_Load(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(Request.QueryString["id"]);
-            
+            hdRentId.Value = id.ToString();
            
             
 
@@ -36,15 +36,25 @@ namespace RentalSoftware
             Lblprice.Text =TxtItemprice.Text;
             int due = Convert.ToInt32(Lblcurrentdate.Text) * Convert.ToInt32(TxtItemprice.Text);
                  TxtDueamount.Text = due.ToString();
-               
 
 
+            
         }
 
         protected void BtnSubmit_Click(object sender, EventArgs e)
         {
-            Lblstatus.Text = "Returned the item"; 
-            
+         
+
+
+
+
+            string sql = "update rental_tbl set Status=1 where RentId=" + hdRentId.Value + "";
+            int i = objrent.UpdateRent(sql);
+            if (i > 0)
+            {
+
+                Response.Redirect("Rent.aspx");
+            }
         }
     }
 }
